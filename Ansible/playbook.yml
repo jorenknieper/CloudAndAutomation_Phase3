@@ -19,14 +19,17 @@
         #- php-xmlrpc
         # - php-mcrypt
         #- php-pear
-        #- git
-        
-    
+        - git
+
+
     - name: enable services
       systemd:
         name: httpd
         state: started
         enabled: yes
-        
+
     - name: clone git repo
-      git: repo=https://github.com/jorenknieper/CloudAndAutomation_Phase3_WebFiles.git dest=/var update=no
+      git: repo=https://github.com/jorenknieper/CloudAndAutomation_Phase3_WebFiles.git dest=/cloudandautomation/ update=no
+
+    - name: cp to var,www,html
+      command: cp -r /cloudandautomation/www /var/

@@ -8,7 +8,7 @@ data "aws_ami" "ec2-ami" {
     values = ["packer-web"]
   }
   most_recent = true
-  owners = ["325020011023"]
+  owners = ["624402370087"]
 }
 
 resource "aws_security_group" "web" {
@@ -40,7 +40,7 @@ resource "aws_instance" "weba1" {
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1a"
   vpc_security_group_ids = ["${aws_security_group.web.id}"]
-  key_name               = "Project"
+  key_name               = "firstbox"
   subnet_id              = aws_subnet.privA.id
 
   tags = {
@@ -53,7 +53,7 @@ resource "aws_instance" "webb1" {
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1b"
   vpc_security_group_ids = ["${aws_security_group.web.id}"]
-  key_name               = "Project"
+  key_name               = "firstbox"
   subnet_id              = aws_subnet.privB.id
 
   tags = {
@@ -66,7 +66,7 @@ resource "aws_instance" "webc1" {
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1c"
   vpc_security_group_ids = ["${aws_security_group.web.id}"]
-  key_name               = "Project"
+  key_name               = "firstbox"
   subnet_id              = aws_subnet.privC.id
 
   tags = {

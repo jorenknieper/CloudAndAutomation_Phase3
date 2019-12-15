@@ -1,12 +1,13 @@
 {
-    "builders":[ 
-        { 
+    "builders":[
+        {
             "type":"amazon-ebs",
             "region":"us-east-1",
             "source_ami": "ami-00068cd7555f543d5",
-            "instance_type":"t2.micro",
-            "vpc_id":"vpc-ef8ae395",
-            "subnet_id":"subnet-07db0172b1ac468d5",
+            "instance_type":"t2.small",
+            "vpc_id":"vpc-12acc568",
+            "subnet_id":"subnet-02e8aaa2dfa0a0be3",
+            "associate_public_ip_address": true,
             "ssh_username":"ec2-user",
             "ami_name":"packer-web {{timestamp}}",
             "tags": {
@@ -14,8 +15,8 @@
             }
         }
     ],
-    "provisioners":[ 
-        { 
+    "provisioners":[
+        {
             "type":"ansible",
             "playbook_file":"../Ansible/playbook.yml"
         }

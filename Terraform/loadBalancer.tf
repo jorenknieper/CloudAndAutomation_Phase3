@@ -53,7 +53,8 @@ resource "aws_lb_target_group" "front_end" {
     name     = "target-group-terraform"
     port     = 80
     protocol = "HTTP"
-    vpc_id   = "vpc-ef8ae395"
+    vpc_id   = "vpc-12acc568"
+
 }
 
 resource "aws_lb_target_group_attachment" "attachment1" {
