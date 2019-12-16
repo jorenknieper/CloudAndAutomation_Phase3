@@ -14,9 +14,9 @@ resource "aws_security_group" "database" {
   }
 }
 
-data "aws_db_snapshot" "testDBsnapshot" {
+data "aws_db_snapshot" "fase3dbsnapshot" {
     most_recent = true
-    db_instance_identifier = "fase2db"
+    db_instance_identifier = "fase3db"
 }
 
 resource "aws_db_subnet_group" "default" {
@@ -34,7 +34,7 @@ resource "aws_db_instance" "service" {
   engine                      = "mysql"
   engine_version              = "5.7.26"
   instance_class              = "db.t2.micro"
-  name                        = "testDB"
+  name                        = "fase3db"
   username                    = "admin"
   password                    = "Pxl2019!"
   # password                    = aws_secretsmanager_secret_version.rdstf.secret_string
