@@ -1,5 +1,5 @@
 # publicA
-resource "aws_subnet" "pubA" {
+resource "aws_subnet" "publicA" {
     vpc_id = "vpc-12acc568"
 
     cidr_block = "172.31.203.0/24"
@@ -11,7 +11,7 @@ resource "aws_subnet" "pubA" {
 }
 
 # publicB
-resource "aws_subnet" "pubB" {
+resource "aws_subnet" "publicB" {
     vpc_id = "vpc-12acc568"
 
     cidr_block = "172.31.204.0/24"
@@ -23,7 +23,7 @@ resource "aws_subnet" "pubB" {
 }
 
 # publicC
-resource "aws_subnet" "pubC" {
+resource "aws_subnet" "publicC" {
     vpc_id = "vpc-12acc568"
 
     cidr_block = "172.31.205.0/24"
@@ -35,7 +35,7 @@ resource "aws_subnet" "pubC" {
 }
 
 # privateA
-resource "aws_subnet" "privA" {
+resource "aws_subnet" "privateA" {
     vpc_id = "vpc-12acc568"
 
     cidr_block = "172.31.200.0/24"
@@ -47,7 +47,7 @@ resource "aws_subnet" "privA" {
 }
 
 # privateB
-resource "aws_subnet" "privB" {
+resource "aws_subnet" "privateB" {
     vpc_id = "vpc-12acc568"
 
     cidr_block = "172.31.201.0/24"
@@ -59,7 +59,7 @@ resource "aws_subnet" "privB" {
 }
 
 # privateC
-resource "aws_subnet" "privC" {
+resource "aws_subnet" "privateC" {
     vpc_id = "vpc-12acc568"
 
     cidr_block = "172.31.202.0/24"
