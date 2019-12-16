@@ -17,8 +17,8 @@ resource "aws_s3_bucket" "b" {
 resource "aws_s3_bucket_object" "file_upload" {
   provider = aws.west
   bucket = aws_s3_bucket.b.id
-  key    = "ikbeneenfoto.jpg"
-  source = "foto.jpg"
+  key    = "robinzenface.jpg"
+  source = "robin.jpg"
 }
 
 resource "aws_s3_bucket_policy" "b" {
