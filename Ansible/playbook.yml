@@ -10,15 +10,7 @@
         - httpd-tools
         - mod_ssl
         - php
-        #- php-devel
         - php-mysql
-        #- php-pdo
-        #- php-mbstring
-        #- php-gd
-        #- php-xml
-        #- php-xmlrpc
-        # - php-mcrypt
-        #- php-pear
         - git
 
 
