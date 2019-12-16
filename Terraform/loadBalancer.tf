@@ -29,7 +29,7 @@ resource "aws_lb" "loadbalancer" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = ["${aws_security_group.loadbalancer.id}"]
-  subnets            = ["${aws_subnet.pubA.id}", "${aws_subnet.pubB.id}", "${aws_subnet.pubC.id}"]
+  subnets            = ["${aws_subnet.publicA.id}", "${aws_subnet.publicB.id}", "${aws_subnet.publicC.id}"]
 
   enable_deletion_protection       = false
   enable_cross_zone_load_balancing = true
