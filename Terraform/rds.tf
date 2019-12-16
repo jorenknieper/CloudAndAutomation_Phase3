@@ -40,7 +40,7 @@ resource "aws_db_instance" "service" {
   # password                    = aws_secretsmanager_secret_version.rdstf.secret_string
   identifier                  = "fase3db"
   skip_final_snapshot         = true
-  snapshot_identifier         = data.aws_db_snapshot.testDBsnapshot.id
+  snapshot_identifier         = data.aws_db_snapshot.fase3dbsnapshot.id
   db_subnet_group_name        = aws_db_subnet_group.default.name
   multi_az                    = true
   allow_major_version_upgrade = true
